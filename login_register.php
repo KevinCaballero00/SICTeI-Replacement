@@ -5,6 +5,7 @@ require_once 'config.php';
 
 if (isset($_POST['register'])) {
     $name = $_POST['name'];
+    $lastName = $_POST['lastName'];
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $role = $_POST['role'];
@@ -14,7 +15,7 @@ if (isset($_POST['register'])) {
         $_SESSION['register_error'] = "Email already registered!";
         $_SESSION['active_form'] = 'register';
     } else {
-        $conn->query("INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$password', '$role')");
+        $conn->query("INSERT INTO users (name, lastName, email, password, role) VALUES ('$name', '$lastName', '$email', '$password', '$role')");
     }
 
     header("Location: login.php");

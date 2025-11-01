@@ -47,12 +47,14 @@ function isActiveForm($formName, $activeForm) {
                 <h2>Registro SICTel 2025</h2>
                 <?= showError($errors['register']); ?>
                 <input type="text" name="name" placeholder="Nombre" required>
+                <input type="text" name="lastName" placeholder="Apellido" required>
                 <input type="email" name="email" placeholder="Correo Electronico" required>
                 <input type="password" name="password" placeholder="Contraseña" required>
                 <select name="role" required>
                     <option value="">--Selecciona un Rol--</option>
-                    <option value="user">Usuario</option>
                     <option value="admin">Administrador</option>
+                    <option value="user">Ponente</option>
+                    <option value="eval">Evaluador</option>
                 </select>
                 <button type="submit" name="register">Registrarse</button>
                 <p>¿Ya tienes una cuenta? <a href="#" onclick="showForm('login-form')">Iniciar Sesión</a></p>
