@@ -12,7 +12,7 @@ if (isset($_POST['register'])) {
 
     $checkEmail = $conn->query("SELECT email FROM users WHERE email = '$email'");
     if ($checkEmail->num_rows > 0) {
-        $_SESSION['register_error'] = "Email already registered!";
+        $_SESSION['register_error'] = "¡Este Email ya se encuentra registrado!";
         $_SESSION['active_form'] = 'register';
     } else {
         $conn->query("INSERT INTO users (name, lastName, email, password, role) VALUES ('$name', '$lastName', '$email', '$password', '$role')");
@@ -33,16 +33,16 @@ if (isset($_POST['login'])) {
             $_SESSION['name'] = $user['name'];
             $_SESSION['email'] = $user['email'];
 
-            if ($user['role'] === 'admin') {
+            if ($user['role'] === 'Administrador') {
                 header("Location: index.html");
             } else {
-                header("Location: contenido.html");
+                header("Location: index.html");
             }
             exit();
         }
     }
 
-    $_SESSION['login_error'] = 'Incorrect email or password!';
+    $_SESSION['login_error'] = '¡Correo electronico o contraseña no validos!';
     $_SESSION['active_form'] = 'login';
     header("Location: login.php");
     exit();

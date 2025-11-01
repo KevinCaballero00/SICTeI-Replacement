@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Estilos para el Login y Registro */
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to right,#e2e2e2, #c9d6ff);
+    background: linear-gradient(to right,#c1eea7, #bdcaf5);
     color: #333;
 }
 
@@ -57,19 +58,19 @@ select {
 button {
     width: 100%;
     padding: 12px;
-    background: #7494ac;
+    background: #F5A126;
     border-radius: 6px;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    color: #fff;
+    color: #1d1a17;
     font-weight: 500;
     margin-bottom: 20px;
     transition: 0,5s;
 }
 
 button:hover {
-    background: #6884d3;
+    background: #f0e228;
 }
 
 p {
