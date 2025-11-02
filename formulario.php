@@ -1,10 +1,14 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+<?php
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>12va SEMANA INTERNACIONAL DE CIENCIA TECNOLOGIA E INNOVACCION 2025 - UFPS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12va SEMANA INTERNACIONAL DE CIENCIA TECNOLOGIA E INNOVACCION 2025 - UFPS - FORMULARIO</title>
     <meta name="author" content="SICTeI">
     <meta name="description" content="SICTeI - Semana Internacional de Ciencia Tecnología e Innovacción">
     <meta name="keywords" content="SICTeI">
@@ -44,11 +48,12 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <!-- Formulario Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styleFormulario.css">
 </head>
 
 <body>
-<!--============================== Mobile Menu ============================== -->
+    <!--============================== Mobile Menu ============================== -->
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
@@ -100,12 +105,17 @@
                             <li><a href="https://seincienciatecnologia.ufpso.edu.co/2022/index.html">9na Edicion</a>
                             </li>
                             <li><a href="https://seincienciatecnologia.ufpso.edu.co">10ma Edicion</a></li>
+                            <li><a href="https://sictei.ufps.edu.co/index.html"></a>11va Edicion</li>
 
                         </ul>
                     </li>
 
                     <li>
                         <a href="perfil.php">PERFIL</a>
+                    </li>
+
+                    <li>
+                        <a href="formulario.php">FORMULARIO</a>
                     </li>
 
                     <li>
@@ -116,7 +126,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <!--============================== Header Area ==============================-->
     <nav class="navbar navbar-expand-lg navbar-custom ">
@@ -146,21 +156,22 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">CONTACTO</a>
                     </li>
+
                     <li class="nav-item dropdown menu-item-has-children">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> PUBLICACIONES </a>
-                        <ul class="dropdown-menu" >
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="revistas.html">Revistas</a></li>
                             <li><a class="dropdown-item" href="memorias.html">Memorias</a></li>
                             <li><a class="dropdown-item" href="resultados.html">Resultados</a></li>
                             <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1YlH2FJZvXLA7IUe_Eu5gvRkIZQFxSn82?usp=sharing">Posters</a> </li>
-                            <li><a class="dropdown-item" href="contenido.html">Contenido</a></li> 
+                            <li><a class="dropdown-item" href="contenido.html">Contenido</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown menu-item-has-children">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> EDICIONES </a>
-                        <ul class="dropdown-menu" >  
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="http://www.ufps.edu.co/ufps/IIIsemanainternacional/"
-                                target="_blank">3ra Edicion</a>
+                                    target="_blank">3ra Edicion</a>
                             <li><a class="dropdown-item" href="http://www.ufps.edu.co/ufps/IVsemanainternacional/index.html"
                                     target="_blank">4ta Edicion</a></li>
                             <li><a class="dropdown-item" href="https://seincienciatecnologia.ufpso.edu.co/2018/index.html"
@@ -175,54 +186,129 @@
                                     target="_blank">9na Edicion</a></li>
                             <li><a class="dropdown-item" href="https://seincienciatecnologia.ufpso.edu.co"
                                     target="_blank">10ma Edicion</a></li>
+                            <li><a class="dropdown-item" href="https://sictei.ufps.edu.co/index.html"
+                                    target="_blank">11va Edicion</a></li>
                         </ul>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="perfil.php">PERFIL</a>
                     </li>
-                    
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.php">FORMULARIO</a>
+                    </li>
                 </ul>
+
                 <a href="login.php" class="btn btn-inscripcion ms-2 me-3">LOGIN</a>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid py-5">
+    <!--******************************** Formulario Area ********************************-->
+    <div class="body-form">
         <div class="container">
-            <div class="title-area text-center mt-5">
-                <h2 class="sec-title">RESULTADOS</h2>
-            </div>
-    
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-4 py-2 py-lg-0 d-flex flex-column align-items-center" style="min-height: 550px;">
-                    <h1 class="sec-title mt-5 text-center">Resultados SICTeI 2024</h1>
-                    <a href="https://drive.google.com/file/d/16rPiepLr4_ikHj4XNxKNqTo4mX64temJ/view?usp=sharing" target="_blank">
-                        <img class="w-100 h-80" src="assets/img/resultados/ResultadosSICTeI2024.png" style="object-fit: cover;">
-                    </a>
+            <form action="formulario_res.php" method="POST">
+                <div class="form-box">
+                    <div class="input-wrap">
+                        <h2 class="sec-title">INSCRIPCIÓN DE PONENCIA A LA 12va SEMANA INTERNACIONAL DE CIENCIA, TECNOLOGÍA E INNOVACIÓN 2025</h2>
+
+                        <input type="email" name="emailForm" placeholder="Correo Electronico">
+
+                        <select name="modalidad" required>
+                            <option value="">-Indique la Modalidad en la que desea participar-</option>
+                            <option value="modalidad-1">Modalidad oral presencial</option>
+                            <option value="modalidad-2">Modalidad oral virtual</option>
+                            <option value="modalidad-3">Modalidad póster presencial</option>
+                        </select>
+
+                        <select name="estado" required>
+                            <option value="">-Indique el Estado del Proyecto de Investigación que va a presentar-</option>
+                            <option value="estado-1">En Ejecución</option>
+                            <option value="estado-2">Finalizado</option>
+                        </select>
+
+                        <input type="text" name="nameForm" placeholder="Titulo de la Ponencia">
+
+                        <input type="text" name="ponente" placeholder="Nombre Completo del ponente">
+
+                        <select name="documento" required>
+                            <option value="">-Tipo de Documento de Identidad-</option>
+                            <option value="doc-1">CC=Cédula de Ciudadanía</option>
+                            <option value="doc-2">CE=Cédula de Extranjería</option>
+                            <option value="doc-3">TI=Tarjeta de Identidad</option>
+                            <option value="doc-4">PA=Pasaporte</option>
+                            <option value="doc-5">DNI=Documento Nacional de Identidad</option>
+                        </select>
+
+                        <input type="text" name="num-doc" placeholder="Número de Identificación sin punto de separación">
+
+                        <input type="text" name="telefono" placeholder="Número Telefónico del Ponente">
+
+                        <select name="niv-estu" required>
+                            <option value="">-Indicar el último nivel de estudio obtenido por el ponente-</option>
+                            <option value="niv-estu-1">Nivel Técnico</option>
+                            <option value="niv-estu-2">Nivel Tecnológico</option>
+                            <option value="niv-estu-3">Estudiante de Pregrado</option>
+                            <option value="niv-estu-4">Profesional Universitario</option>
+                            <option value="niv-estu-5">Especialización</option>
+                            <option value="niv-estu-6">Estudiante de Maestría</option>
+                            <option value="niv-estu-7">Maestría</option>
+                            <option value="niv-estu-8">Estudiante de Doctorado</option>
+                            <option value="niv-estu-9">Doctorado</option>
+                            <option value="niv-estu-10">Postdoctorado</option>
+                        </select>
+
+                        <select name="programa" required>
+                            <option value="">-Seleccione su programa academico-</option>
+                            <option value="programa-1">Administración de Empresas</option>
+                            <option value="programa-2">Arquitectura</option>
+                            <option value="programa-3">Comercio Internacional</option>
+                            <option value="programa-4">Comunicación Social</option>
+                            <option value="programa-5">Contaduría Pública</option>
+                            <option value="programa-6">Derecho</option>
+                            <option value="programa-7">Enfermería</option>
+                            <option value="programa-8">Ingeniería Agroindustrial</option>
+                            <option value="programa-9">Ingeniería Agronómica</option>
+                            <option value="programa-10">Ingeniería Ambiental</option>
+                            <option value="programa-11">Ingeniería Biotecnológica</option>
+                            <option value="programa-12">Ingeniería Civil</option>
+                            <option value="programa-13">Ingeniería de Minas</option>
+                            <option value="programa-14">Ingeniería de Sistemas</option>
+                            <option value="programa-15">Ingeniería Electromecánica</option>
+                            <option value="programa-16">Ingeniería Electrónica</option>
+                            <option value="programa-17">Ingeniería Industrial</option>
+                            <option value="programa-18">Ingeniería Mecánica</option>
+                            <option value="programa-19">Ingeniería Pecuaria</option>
+                            <option value="programa-20">Lic. en Ciencias Naturales y Educación Ambiental</option>
+                            <option value="programa-21">Lic. en Educación Comunitaria</option>
+                            <option value="programa-22">Lic. en Educación Infantil</option>
+                            <option value="programa-23">Lic. en Matemáticas</option>
+                            <option value="programa-24">Maestría en Administración</option>
+                            <option value="programa-25">Maestría en Educación Matemática</option>
+                            <option value="programa-26">Maestría en Ingeniería de Recursos Hidráulicos</option>
+                            <option value="programa-27">Química Industrial</option>
+                            <option value="programa-28">Seguridad y Salud en el Trabajo</option>
+                            <option value="programa-29">Tecnología en Construcciones Civiles</option>
+                            <option value="programa-30">Tecnología en Gestión Comercial y Financiera</option>
+                            <option value="programa-31">Tecnología en Obras Civiles</option>
+                            <option value="programa-32">Tecnología en Procesos Industriales</option>
+                            <option value="programa-33">Tecnología en Regencia de Farmacia</option>
+                            <option value="programa-35">Trabajo Social</option>
+                            <option value="programa-36">Zootecnia</option>
+                        </select>
+                    </div>
+                    <button type="submit" name="enviar">Enviar Formulario</button>
+                    <p class="form-messages mb-0 mt-3"></p>
                 </div>
-    
-                <div class="col-lg-4 py-2 py-lg-0 mb-5 d-flex flex-column align-items-center" style="min-height: 550px;">
-                    <h1 class="sec-title mt-5 text-center">Resultados EISI 2024</h1>
-                    <a href="https://drive.google.com/file/d/16sImC_XiFaqB1_sySMaBmen98LS5yiAf/view?usp=sharing" target="_blank">
-                        <img class="w-100 h-80" src="assets/img/resultados/ResultadosEISI2024.png" style="object-fit: cover;">
-                    </a>
-                </div>
-            </div>
         </div>
+        </form>
     </div>
-    
+    </div>
+
+    <!--============================== Footer Area ==============================-->
 
 
-
-
-
-    <!--==============================
-	Footer Area
-==============================-->
-
-
-    <footer class="footer-wrapper footer-layout2 mt-5">
+    <footer class="footer-wrapper footer-layout2">
         <div class="widget-area">
             <div class="container">
                 <div class="row justify-content-between">
@@ -255,11 +341,9 @@
                             </div>
                         </div>
 
-
-
-
-
                     </div>
+
+
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget">
                             <h3 class="widget_title">LICENCIA CC</h3>
@@ -293,12 +377,10 @@
                 </div>
             </div>
         </div>
+
     </footer>
 
-    <!--********************************
-			Code End  Here 
-	******************************** -->
-
+    <!--******************************** Code End  Here  ******************************** -->
     <!-- Scroll To Top -->
     <div class="scroll-top">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -329,6 +411,54 @@
 
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            var swiper = new Swiper('.swiper-container', {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
+    <script>
+        // ID del video de YouTube que deseas reproducir
+        var videoId = 'QEBWnECyTN4';
+
+        // Cargar el reproductor cuando el documento esté listo
+        $(document).ready(function() {
+            var tag = document.createElement('script');
+            tag.src = 'https://www.youtube.com/iframe_api';
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            var player;
+            window.onYouTubeIframeAPIReady = function() {
+                player = new YT.Player('player', {
+                    height: '360',
+                    width: '640',
+                    videoId: videoId,
+                    playerVars: {
+                        'autoplay': 0, // 1 para autoplay
+                        'controls': 1, // 0 para desactivar controles
+                        'rel': 0, // 0 para desactivar videos relacionados al final
+                        'showinfo': 0, // 0 para desactivar el título del video
+                        'modestbranding': 1 // 1 para quitar el logo de YouTube
+                    }
+                });
+            };
+        });
+    </script>
 </body>
 
 </html>
