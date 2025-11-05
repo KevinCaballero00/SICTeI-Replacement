@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Fontawesome Icon -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
     <!-- Swiper Js -->
@@ -582,7 +583,7 @@
             <div class="container">
                 <div class="row gy-2 align-items-center justify-content-center">
                     <div class="col-md-6 text-center">
-                        <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2025 . All Rights Reserved.
+                        <p class="copyright-text">Copyright <i class="fas fa-copyright"></i> 2025 . All Rights Reserved.
                         </p>
                     </div>
                 </div>

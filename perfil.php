@@ -26,7 +26,7 @@ $user = $result->fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi perfil - SICTel 2025</title>
+    <title>Mi Usuario - SICTel 2025</title>
     <link rel="stylesheet" href="assets/css/styleProfile.css">
 </head>
 
@@ -34,7 +34,7 @@ $user = $result->fetch_assoc();
     <div class="container">
         <div class="form-box active profile-box">
             <?php if ($user): ?>
-                <h2>Mi Perfil</h2>
+                <h2>Mi Usuario</h2>
                 <!-- Información del usuario -->
                 <div class="profile-info">
                     <div class="info-group">

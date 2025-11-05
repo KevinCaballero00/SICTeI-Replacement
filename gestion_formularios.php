@@ -77,6 +77,7 @@ $result = $conn->query("SELECT id, name_form, ponente, email_form, modalidad, es
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Fontawesome Icon -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
     <!-- Swiper Js -->
@@ -147,7 +148,7 @@ $result = $conn->query("SELECT id, name_form, ponente, email_form, modalidad, es
                     </li>
 
                     <li>
-                        <a href="perfil.php">PERFIL</a>
+                        <a href="perfil.php">USUARIO</a>
                     </li>
 
                     <li>
@@ -223,7 +224,7 @@ $result = $conn->query("SELECT id, name_form, ponente, email_form, modalidad, es
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="perfil.php">PERFIL</a>
+                        <a class="nav-link" href="perfil.php">USUARIO</a>
                     </li>
 
                 </ul>
@@ -335,8 +336,8 @@ $result = $conn->query("SELECT id, name_form, ponente, email_form, modalidad, es
                         <div class="widget widget_nav_menu footer-widget">
                             <h3 class="widget_title">CONTACTO</h3>
                             <div class="menu-all-pages-container">
-                                <p>Si tiene alguna duda puede enviarnos un correo electrónico a</p>
-                                <p>SICTeI@ufps.edu.co<br>Correo electrónico del evento</p>
+                                <p class="foot">Si tiene alguna duda puede enviarnos un correo electrónico a</p>
+                                <p class="foot">SICTeI@ufps.edu.co<br>Correo electrónico del evento</p>
                             </div>
                         </div>
 
@@ -353,9 +354,9 @@ $result = $conn->query("SELECT id, name_form, ponente, email_form, modalidad, es
                                         <img alt="Licencia Creative Commons" style="border-width:0"
                                             src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
                                     </a>
-                                    <p><br />
+                                    <p class="foot"><br />
                                         Esta obra está bajo una</p>
-                                    <p>Licencia Creative Commons </br>Atribución-NoComercial-SinDerivar </br>4.0
+                                    <p class="foot">Licencia Creative Commons </br>Atribución-NoComercial-SinDerivar </br>4.0
                                         Internacional.</p>
 
 
@@ -370,7 +371,7 @@ $result = $conn->query("SELECT id, name_form, ponente, email_form, modalidad, es
             <div class="container">
                 <div class="row gy-2 align-items-center justify-content-center">
                     <div class="col-md-6 text-center">
-                        <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2025 . All Rights Reserved.
+                        <p class="copyright-text">Copyright <i class="fas fa-copyright"></i> 2025 . All Rights Reserved.
                         </p>
                     </div>
                 </div>
