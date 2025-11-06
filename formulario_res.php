@@ -50,10 +50,40 @@ if (!empty($errors)) {
     exit;
 }
 
+// ===== Manejo del archivo PDF =====
+$archivo_pdf = null;
+if (isset($_FILES['archivo_pdf']) && $_FILES['archivo_pdf']['error'] === UPLOAD_ERR_OK) {
+    $nombreTmp = $_FILES['archivo_pdf']['tmp_name'];
+    $nombreArchivo = basename($_FILES['archivo_pdf']['name']);
+    $ext = strtolower(pathinfo($nombreArchivo, PATHINFO_EXTENSION));
+
+    if ($ext === 'pdf') {
+        $directorioDestino = 'uploads/';
+        if (!is_dir($directorioDestino)) {
+            mkdir($directorioDestino, 0777, true);
+        }
+
+        // Evitar nombres duplicados
+        $nombreUnico = uniqid('ponencia_', true) . '.' . $ext;
+        $rutaDestino = $directorioDestino . $nombreUnico;
+
+        if (move_uploaded_file($nombreTmp, $rutaDestino)) {
+            $archivo_pdf = $rutaDestino;
+        } else {
+            die('Error al guardar el archivo PDF.');
+        }
+    } else {
+        die('Solo se permiten archivos PDF.');
+    }
+} else {
+    die('Debe subir un archivo PDF.');
+}
+
+
 // Insert usando prepared statement (tabla 'formularios')
 $sql = "INSERT INTO formularios 
-    (email_form, modalidad, estado, name_form, ponente, documento, num_doc, telefono, niv_estu, programa, grupo_inv, institu, ubicacion, eval_status, revisado)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    (email_form, modalidad, estado, name_form, ponente, documento, num_doc, telefono, niv_estu, programa, grupo_inv, institu, ubicacion, archivo_pdf, eval_status, revisado)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
 if (!$stmt) {
@@ -62,7 +92,7 @@ if (!$stmt) {
 }
 
 $stmt->bind_param(
-    'ssssssssssssssi',
+    'sssssssssssssssi',
     $email,
     $modalidad,
     $estado,
@@ -76,6 +106,7 @@ $stmt->bind_param(
     $grupo_inv,
     $institu,
     $ubicacion,
+    $archivo_pdf,
     $eval_status,
     $revisado
 );
@@ -91,5 +122,3 @@ if ($stmt->execute()) {
 $stmt->close();
 $conn->close();
 exit;
-?>
-

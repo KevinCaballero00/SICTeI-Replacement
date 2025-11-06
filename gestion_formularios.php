@@ -302,6 +302,11 @@ $result = $conn->query("SELECT id, name_form, ponente, email_form, modalidad, es
                     <p><strong>Institución:</strong> <?php echo htmlspecialchars($detail['institu']); ?></p>
                     <p><strong>Ubicación:</strong> <?php echo htmlspecialchars($detail['ubicacion']); ?></p>
                     <p><strong>Estado evaluación:</strong> <?php echo htmlspecialchars($detail['eval_status']); ?></p>
+                    <?php if (!empty($detail['archivo_pdf'])): ?>
+                        <p><strong>Ponencia en formato PDF:</strong>
+                            <a href="<?php echo htmlspecialchars($detail['archivo_pdf']); ?>" target="_blank">Ver PDF</a>
+                        </p>
+                    <?php endif; ?>
                 <?php endif; ?>
             </div>
         </div>

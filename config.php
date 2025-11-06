@@ -2,8 +2,8 @@
 
 $host = "localhost";
 $user = "root";
-$password = "";
-$database = "users_db";
+$password = "anais";
+$database = "sictel_db";
 
 $conn = new mysqli($host, $user, $password, $database);
 

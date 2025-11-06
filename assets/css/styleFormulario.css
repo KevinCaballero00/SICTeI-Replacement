@@ -77,9 +77,15 @@ button:hover {
     background: #f0e228;
 }
 
+.pon {
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-left: 80px;
+}
+
 p {
     font-size: 14.5px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 10px;
 }
 

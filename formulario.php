@@ -201,7 +201,7 @@
     <!--******************************** Formulario Area ********************************-->
     <div class="body-form">
         <div class="container">
-            <form action="formulario_res.php" method="POST">
+            <form action="formulario_res.php" method="POST" enctype="multipart/form-data">
                 <div class="form-box">
                     <div class="input-wrap">
                         <h2 class="sec-title">INSCRIPCIÓN DE PONENCIA A LA 12va SEMANA INTERNACIONAL DE CIENCIA, TECNOLOGÍA E INNOVACIÓN 2025</h2>
@@ -507,6 +507,10 @@
                             <option value="Vaupés">Vaupés</option>
                             <option value="Vichada">Vichada</option>
                         </select>
+
+                        <!-- Campo para subir el archivo PDF -->
+                        <label for="archivo_pdf" class="pon">Subir archivo PDF de la ponencia:</label>
+                        <input type="file" name="archivo_pdf" id="archivo_pdf" accept="application/pdf" required>
 
                     </div>
                     <button type="submit" name="enviar">Enviar Formulario</button>
