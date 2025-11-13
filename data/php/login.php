@@ -32,7 +32,7 @@ function isActiveForm($formName, $activeForm) {
     <div class="container">
         <div class="form-box <?= isActiveForm('login', $activeForm); ?>" id="login-form">
             <form action="login_register.php" method="post">
-                <h2>Bienvenido a SICTel 2025</h2>
+                <h2>Bienvenido a SICTel 2026</h2>
                 <?= showError($errors['login']); ?>
                 <input type="email" name="email" placeholder="Correo electronico" required>
                 <input type="password" name="password" placeholder="Contraseña" required>
@@ -45,7 +45,7 @@ function isActiveForm($formName, $activeForm) {
         
         <div class="form-box <?= isActiveForm('register', $activeForm); ?>" id="register-form">
             <form action="login_register.php" method="post">
-                <h2>Registro SICTel 2025</h2>
+                <h2>Registro SICTel 2026</h2>
                 <?= showError($errors['register']); ?>
                 <input type="text" name="name" placeholder="Nombre" required>
                 <input type="text" name="lastName" placeholder="Apellido" required>

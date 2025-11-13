@@ -17624,6 +17624,51 @@ span.select2-selection.select2-selection--single:focus {
   margin-right: auto;
 }
 
+.nota {
+  color:#ff7300
+}
+
+/* Personalizar botón 4º Encuentro */
+#btn-4encuentro{
+  background-image: none !important;
+  background-color: #A5CD37 !important; /* color principal - reemplazar si se desea */
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+#btn-4encuentro:hover{
+  background-color: #A5CD37 !important; /* color hover - ajustar */
+  color: #ffffff !important;
+}
+
+/* Personalizar botón 9º Encuentro */
+#btn-9encuentro{
+  background-image: none !important;
+  background-color: #53C4CE !important; /* color principal - reemplazar si se desea */
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+#btn-9encuentro:hover{
+  background-color: #53C4CE !important; /* color hover - ajustar */
+  color: #ffffff !important;
+}
+
+/* Personalizar botón Rojo */
+#btn-rojo{
+  background-image: none !important;
+  background-color: #C00000 !important; /* color principal - reemplazar si se desea */
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+#btn-rojo:hover{
+  background-color: #C00000 !important; /* color hover - ajustar */
+  color: #ffffff !important;
+}
 
 
 /*# sourceMappingURL=style.css.map */

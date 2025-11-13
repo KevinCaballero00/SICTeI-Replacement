@@ -43,7 +43,7 @@ try {
 
     //Recipients}
     //$to = "SICTeI@ufps.edu.co"; // Reemplaza con tu dirección de correo
-    $mail->setFrom('SICTeI@ufps.edu.co', 'SICTeI');
+    $mail->setFrom('SICTeI@ufps.edu.co', 'SICTeI - pruebas');
     $mail->addAddress('SICTeI@ufps.edu.co');     //Add a recipient
     $mail->addAddress("$email");     //Add a recipient
     

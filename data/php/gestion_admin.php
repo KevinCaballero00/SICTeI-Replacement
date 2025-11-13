@@ -151,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'assig
                             <li><a href="../memorias.html">Memorias</a></li>
                             <li><a href="../resultados.html">Resultados</a></li>
                             <li><a
-                                    href="https://drive.google.com/drive/folders/1YlH2FJZvXLA7IUe_Eu5gvRkIZQFxSn82?usp=sharing">Posters</a>
+                                    href="https://drive.google.com/drive/folders/1Dqp5b23QAxmjQocIMmyFVoUecIUj2QJu?usp=sharing">Posters</a>
                             </li>
                             <li><a href="../contenido.html">Contenido</a></li>
                         </ul>
@@ -226,7 +226,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'assig
                             <li><a class="dropdown-item" href="../revistas.html">Revistas</a></li>
                             <li><a class="dropdown-item" href="../memorias.html">Memorias</a></li>
                             <li><a class="dropdown-item" href="../resultados.html">Resultados</a></li>
-                            <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1YlH2FJZvXLA7IUe_Eu5gvRkIZQFxSn82?usp=sharing">Posters</a> </li>
+                            <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1Dqp5b23QAxmjQocIMmyFVoUecIUj2QJu?usp=sharing">Posters</a> </li>
                             <li><a class="dropdown-item" href="../contenido.html">Contenido</a></li>
                         </ul>
                     </li>

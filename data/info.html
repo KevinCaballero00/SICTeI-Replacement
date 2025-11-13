@@ -80,7 +80,7 @@
                             <li><a href="memorias.html">Memorias</a></li>
                             <li><a href="resultados.html">Resultados</a></li>
                             <li><a
-                                    href="https://drive.google.com/drive/folders/1YlH2FJZvXLA7IUe_Eu5gvRkIZQFxSn82?usp=sharing">Posters</a>
+                                    href="https://drive.google.com/drive/folders/1Dqp5b23QAxmjQocIMmyFVoUecIUj2QJu?usp=sharing">Posters</a>
                             </li>
                             <li><a href="contenido.html">Contenido</a></li>
                         </ul>
@@ -110,7 +110,7 @@
                     </li>
 
                     <li>
-                        <a href="info.html">LOGIN</a>
+                        <a href="php/login.php">LOGIN</a>
 
                     </li>
                 </ul>
@@ -153,7 +153,7 @@
                             <li><a class="dropdown-item" href="revistas.html">Revistas</a></li>
                             <li><a class="dropdown-item" href="memorias.html">Memorias</a></li>
                             <li><a class="dropdown-item" href="resultados.html">Resultados</a></li>
-                            <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1YlH2FJZvXLA7IUe_Eu5gvRkIZQFxSn82?usp=sharing">Posters</a> </li>
+                            <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1Dqp5b23QAxmjQocIMmyFVoUecIUj2QJu?usp=sharing">Posters</a> </li>
                             <li><a class="dropdown-item" href="contenido.html">Contenido</a></li> 
                         </ul>
                     </li>
@@ -184,7 +184,7 @@
                     </li>
                     
                 </ul>
-                <a href="info.html" class="btn btn-inscripcion ms-2 me-3">LOGIN</a>
+                <a href="php/login.php" class="btn btn-inscripcion ms-2 me-3">LOGIN</a>
             </div>
         </div>
     </nav>
@@ -269,7 +269,7 @@
                     forma: Video ponencias Grupos de Investigación (Máximo 15 minutos), Video ponencias Semilleros de
                     Investigación (Máximo 15 minutos). Estos videos estarán disponibles a partir de noviembre de
                     2026 en el canal de YouTube Ciencia, Tecnología e Innovación UFPS.</p>
-                <a href="https://www.youtube.com/channel/UCnLBvUIpn-6atsg_-eSuXMA" target="_blank"
+                <a id="btn-rojo" href="https://www.youtube.com/@SICTeIUFPS" target="_blank"
                     class="th-btn gr-bg1 shadow-none">Canal de Youtube</a>
                 <p class="sec-text mt-4" style="text-align: justify;" >Los resúmenes presentados se publicarán en las memorias digitales del evento
                     12ª Semana Internacional de Ciencia, Tecnología e Innovación con <strong>ISSN: 2422-3115 (EN
@@ -285,7 +285,7 @@
                     <h2 class="sec-title">TÉRMINOS DE REFERENCIA</h2>
                 </div>
                 <p class="sec-text" style="text-align: justify;">A continuación podrá encontrar los Términos de Referencia del evento en donde podrá encontrar con mayor detalle el paso a paso del proceso de inscripción como Ponente y toda la información referente al evento.</p>
-                <a href="https://drive.google.com/file/d/1-Ap1oQ2o9_2LubN4Qmopncp0XeybSop8/view?usp=drive_link" target="_blank"
+                <a id="btn-rojo" href="https://drive.google.com/file/d/1hxWqfx6LgWwmeiTHgy0jld49KEximEp_/view?usp=sharing" target="_blank"
                     class="th-btn gr-bg1 shadow-none">Terminos de Referencia</a>
             </div>
         </div>
@@ -414,10 +414,10 @@
                     <h2 class="sec-title">PARTICIPAR COMO PONENTE</h2>
                 </div>
                 <p class="sec-text" style="text-align: justify;"><strong>A)</strong> Diligenciar el <strong>Formato de Resumen</strong> con la
-                    investigación y datos completos de todos los autores, <strong>en español e inglés.<br><br>
-                        Nota:</strong> Descargarlo por medio de Archivo > Descargar > Microsoft Word.</p>
-                <a href="https://docs.google.com/document/d/1-8Qxt0wLcYTgsGIZJldCYLwE0LChcwmJ/edit?usp=sharing&ouid=106324308297560075232&rtpof=true&sd=true"
-                    target="_blank" class="th-btn gr-bg1 shadow-none">Formato</a>
+                    investigación y datos completos de todos los autores, <strong>en español e inglés.</strong><br><br>
+                        <strong class="nota">Nota:</strong> Descargarlo por medio de Archivo > Descargar > Microsoft Word.</p>
+                <a id="btn-rojo" href="https://docs.google.com/document/d/1gPTcJQ2JyZ_rz3Z8XPZELMWEqIkEdRdw/edit?usp=sharing&ouid=106324308297560075232&rtpof=true&sd=true"
+                    target="_blank" class="th-btn gr-bg1 shadow-none">Formato de Resumen</a>
                 <p class="sec-text mt-4" style="text-align: justify;"><strong>B)</strong> Diligenciar el formulario de <strong>Inscripción de la
                         Ponencia</strong>: Este formulario permite registrar inicialmente al autor que realizara la
                     ponencia y será con quien estaremos en contacto, los demás autores de la investigación se registran
@@ -426,7 +426,7 @@
                     entrega. Un mismo autor solo podrá registrarse como ponente (persona que realiza la presentación de
                     los resultados del proyecto) en dos (2) ponencias aprobadas; y podrá ser autor (participar) en
                     máximo dos ponencias más.</p>
-                <p class="sec-text" style="text-align: justify;"><strong>Nota:</strong> Los trabajos que deseen participar en el evento
+                <p class="sec-text" style="text-align: justify;"><strong class="nota">Nota:</strong> Los trabajos que deseen participar en el evento
                     <strong>tendrán un costo dependiendo la vinculación (Ver tabla de Tarifas) por ponencia
                         inscrita.</strong> Tenga en cuenta que el Resumen debe ser entregado en el Formato establecido
                     por el evento.</p>
@@ -435,57 +435,69 @@
                 <div class="container">
                     <div class="row mb-3">
                         <div class="col-md-6 mb-3">
-                            <a href="https://forms.gle/ekWKR41LZ2pcYxbY6" target="_blank"
+                            <a href="https://forms.gle/iS7bd1pXS194VG329" target="_blank"
                                 class="btn btn-block btn-primary th-btn gr-bg1 shadow-none">Inscripción de la Ponencia a
-                                la 11ª Semana Internacional</a>
+                                la 12ª Semana Internacional</a>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <a href="https://forms.gle/n4jsK3SdyvhasBeq8" target="_blank"
+                            <a id="btn-9encuentro" href="https://forms.gle/abHqi8MXU5qN4Yef9" target="_blank"
                                 class="btn btn-block btn-primary th-btn gr-bg1 shadow-none">Inscripción de la Ponencia
-                                al 8ᵛᵒ Encuentro de Semilleros</a>
+                                al 9º Encuentro de Semilleros</a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a id="btn-4encuentro" href="https://forms.gle/aDLhhHkNWtnXcX3B8" target="_blank"
+                                class="btn btn-block btn-primary th-btn gr-bg1 shadow-none">Inscripción de la Ponencia 4o Encuentro de Extensión</a>
                         </div>
                     </div>
                 </div>
 
 
-                <p class="sec-text mt-4" style="text-align: justify;"><strong>C)</strong> Una vez registrada la ponencia debe esperar los
-                    <strong>Resultados de Evaluación</strong> que se le enviaran al correo electrónico registrado.</p>
-                <p class="sec-text" style="text-align: justify;"><strong>D)</strong> Los trabajos <strong>Aceptados</strong> deberán realizar el pago
-                    a través del siguiente Portal Acceso UFPS. <br><br><strong>Nota:</strong> Dirigirse en el menú a la
-                    opción de Otros pagos y seleccionar en la lista desplegable la opción del evento correspondiente.
-                    <br><br><strong>Nota:</strong> El sistema se habilitará el 26 de agosto de 2024.</p>
+                <p class="sec-text mt-4" style="text-align: justify;">
+                    <strong>C)</strong> Una vez registrada la ponencia debe esperar los
+                        <a href="resultados.html" style="font-weight: bold; text-decoration: underline; color: #000000;">
+                            Resultados de Evaluación
+                        </a>
+                            que se le enviarán al correo electrónico registrado.
+                </p>
+                <p class="sec-text" style="text-align: justify;"><strong>D)</strong> Los trabajos <strong>Aceptados</strong> deberán realizar el <strong>pago</strong>
+                    a través del siguiente <strong>Portal Acceso UFPS.</strong> <br><br><strong class="nota">Nota:</strong> Dirigirse en el menú a la
+                    opción de Otros pagos y seleccionar en la lista desplegable la opción del evento correspondiente:
+                    <br><br>1. Inscripción de Ponencia 12ª Semana Internacional de Ciencia, Tecnología e Innovación <br>
+                    2. Inscripción de Ponencia 9º Encuentro Interinstitucional de Semilleros de Investigación <br>
+                    3. Inscripción de Ponencia 4º Encuentro de Proyectos de Extensión e Innovación Social
+                    <br><br><strong class="nota">Nota:</strong> El sistema se habilitará el xx de xXXx de 2026.</p>
                 <a href="resultados.html" target="_blank" class="th-btn gr-bg1 shadow-none">Resultados</a>
                 <a href="https://acceso.ufps.edu.co/" target="_blank" class="th-btn gr-bg1 shadow-none">Portal Acceso
                     UFPS</a>
                 <p class="sec-text mt-4" style="text-align: justify;"><strong>E)</strong> Ingresar al siguiente enlace mediante el boton y
                     <strong>Registrar su pago</strong> (Plazo para registrarlo 14 de octubre de 2024).</p>
-                <a href="https://forms.gle/NyhUd48HrcpAq7SZ9" target="_blank"
+                <a id="btn-rojo" href="https://forms.gle/3SNgjrYcnTgmuJ6s6" target="_blank"
                     class="th-btn gr-bg1 shadow-none">Registrar Pago de Inscripcion</a>
                 <p class="sec-text mt-4" style="text-align: justify;"><strong>F)</strong> Los trabajos <strong>Aceptados</strong> deberán elaborar la
                     <strong>Presentación o Póster</strong> utilizando el siguiente formato.
-                    <strong><br><br>Nota:</strong> Descargarlo por medio de Archivo > Descargar > Microsoft PowerPoint.
+                    <strong class="nota"><br><br>Nota:</strong> Descargarlo por medio de Archivo > Descargar > Microsoft PowerPoint.
                 </p>
                 <div class="container">
                     <div class="row mb-3">
                         <div class="col-md-4 mb-3">
-                            <a href="https://docs.google.com/presentation/d/1BX6jIW3H8A0fTu5sTyyEU4C0HVSXm60n/edit?usp=sharing&ouid=106324308297560075232&rtpof=true&sd=true" target="_blank"
+                            <a href="https://docs.google.com/presentation/d/1r3h86j1KfwqrGmjfdMuZo1NJw5lR09ea/edit?usp=sharing&ouid=106324308297560075232&rtpof=true&sd=true" target="_blank"
                                 class="btn btn-block btn-primary th-btn gr-bg1 shadow-none">Formato de Diapositiva
-                                11ª Semana Internacional </a>
+                                12ª Semana Internacional </a>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <a href="https://docs.google.com/presentation/d/10YnJ_BtiXy2DmHL_i19twJoz2UaMaDQ7/edit?usp=sharing&ouid=106324308297560075232&rtpof=true&sd=true" target="_blank"
+                            <a id="btn-9encuentro" href="https://docs.google.com/presentation/d/1ry7RRR7BNP_txc3OWPyo2Y3XeYEVc70g/edit?usp=sharing&ouid=106324308297560075232&rtpof=true&sd=true" target="_blank"
                                 class="btn btn-block btn-primary th-btn gr-bg1 shadow-none">Formato de Diapositiva
-                                8vo Encuentro Semillero</a>
+                                9º Encuentro de Semilleros</a>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <a href="https://docs.google.com/presentation/d/1BXVyHAMpSpZ-hht5ED9v5Z0jvhSlKsl1/edit?usp=sharing&ouid=106324308297560075232&rtpof=true&sd=true" target="_blank"
+                            <a id="btn-rojo" href="https://docs.google.com/presentation/d/1usObwka3p2NAcRlbWE6-bZ8Afs4KkJMq/edit?usp=sharing&ouid=106324308297560075232&rtpof=true&sd=true" target="_blank"
                                 class="btn btn-block btn-primary th-btn gr-bg1 shadow-none">Formato de presentación Póster</a>
                         </div>
                     </div>
                     
                     </div>
             </div>
-                <p class="sec-text" style="text-align: justify;"><strong>Nota:</strong> Los trabajos aprobados en modalidad oral presencial y virtual
+                <p class="sec-text" style="text-align: justify;"><strong class="nota">Nota:</strong> Los trabajos aprobados en modalidad oral presencial y virtual
                     en el evento deberán presentar en la fecha establecida <strong>un video pregrabado de la
                         ponencia</strong>, Las ponencias aprobadas en esta modalidad poster presencial deben enviar solo
                     el formato póster en PDF al formulario establecido. El video debe ser de la siguiente forma,
@@ -506,26 +518,26 @@
                 <div class="container">
                     <div class="row mb-3">
                         <div class="col-md-6 mb-3">
-                            <a href="https://forms.gle/NQt879UoMv7WkWB17" target="_blank"
+                            <a href="https://forms.gle/XRLTBDRKK7ThjVW6A" target="_blank"
                                 class="btn btn-block btn-primary th-btn gr-bg1 shadow-none">Recepción de Archivos
-                                Modalidad Oral 11ª SICTeI</a>
+                                Modalidad Oral 12ª SICTeI</a>
                         </div>
                         <div class="col-md-6 mb-3">
                             <a href="https://forms.gle/i1nNFmsoQXouXPHv7" target="_blank"
                                 class="btn btn-block btn-primary th-btn gr-bg1 shadow-none">Recepción de Archivos
-                                Modalidad Póster 11ª SICTeI</a>
+                                Modalidad Póster 12ª SICTeI</a>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6 mb-3">
-                            <a href="https://forms.gle/ZkKZvo4D1M4wwTqU9" target="_blank"
+                            <a id="btn-9encuentro" href="https://forms.gle/ZkKZvo4D1M4wwTqU9" target="_blank"
                                 class="btn btn-block btn-primary th-btn gr-bg1 shadow-none">Recepción de Archivos
-                                Modalidad Oral 8vo EISI</a>
+                                Modalidad Oral 9º EISI</a>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <a href="https://forms.gle/rBfuKLM9M9GWBtxr6" target="_blank"
+                            <a id="btn-9encuentro" href="https://forms.gle/rBfuKLM9M9GWBtxr6" target="_blank"
                                 class="btn btn-block btn-primary th-btn gr-bg1 shadow-none">Recepción de Archivos
-                                Modalidad Póster 8vo EISI</a>
+                                Modalidad Póster 9º EISI</a>
                         </div>
                     </div>
                 </div>
@@ -537,7 +549,7 @@
                 <p class="sec-text" style="text-align: justify;"><strong>A)</strong> Ingrese al siguiente enlace y complete el formulario para
                     <strong>Inscribirse como Asistencia</strong> durante el evento, <strong>No tiene costo</strong>
                     alguno participar en esta modalidad.</p>
-                <a href="https://forms.gle/ntAUN6QBU8vz6wTz8" target="_blank"
+                <a id="btn-rojo" href="https://forms.gle/ntAUN6QBU8vz6wTz8" target="_blank"
                     class="th-btn gr-bg1 shadow-none">Formulario de Inscripción como Asistente</a>
             </div>
         </div>
