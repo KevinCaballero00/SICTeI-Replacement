@@ -397,7 +397,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'Evaluador') {
             <div class="container">
                 <div class="row gy-2 align-items-center justify-content-center">
                     <div class="col-md-6 text-center">
-                        <p class="copyright-text">Copyright <i class="fas fa-copyright"></i> 2025 . All Rights Reserved.
+                        <p class="copyright-text">Copyright <i class="fas fa-copyright"></i> 2026 . All Rights Reserved.
                         </p>
                     </div>
                 </div>

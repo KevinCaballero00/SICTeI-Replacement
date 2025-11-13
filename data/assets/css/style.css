@@ -17544,7 +17544,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .navbar-custom {
-  background: linear-gradient(to right, #7EB128, #37AAE0);
+  background: linear-gradient(to right, #37AAE0, #37AAE0);
 }
 .btn-inscripcion {
   background-color: #FFA340;
@@ -17600,6 +17600,30 @@ span.select2-selection.select2-selection--single:focus {
   left: 0;
   transform: rotate(-90deg);
 }
+
+.container4to{
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: center; /* centra la fila en la página */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container4to .row{
+  display: flex;
+  justify-content: center; /* centra las columnas dentro de la fila */
+  gap: 1rem; /* separación entre columnas */
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1230px; /* coincide con el ancho principal del sitio */
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 
 /*# sourceMappingURL=style.css.map */

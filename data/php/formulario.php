@@ -198,13 +198,35 @@
         </div>
     </nav>
 
+    <!--============================== Hero Area ==============================-->
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../assets/img/img/Inscripción_1.png" class="d-block w-100" alt="Slide 1">
+          </div>
+          
+          <div class="carousel-item">
+            <img src="../assets/img/img/Inscripción_2.png" class="d-block w-100" alt="Slide 2">
+          </div>
+          
+          <div class="carousel-item">
+            <img src="../assets/img/img/Inscripción_3.png" class="d-block w-100" alt="Slide 3">
+          </div>
+          
+          <div class="carousel-item">
+            <img src="../assets/img/img/Inscripción_4.png" class="d-block w-100" alt="Slide 3">
+          </div>
+        </div>
+    </div>
+
     <!--******************************** Formulario Area ********************************-->
     <div class="body-form">
         <div class="container">
             <form action="formulario_res.php" method="POST" enctype="multipart/form-data">
                 <div class="form-box">
                     <div class="input-wrap">
-                        <h2 class="sec-title">INSCRIPCIÓN DE PONENCIA A LA 12va SEMANA INTERNACIONAL DE CIENCIA, TECNOLOGÍA E INNOVACIÓN 2025</h2>
+                        <h2 class="sec-title">INSCRIPCIÓN DE PONENCIA A LA 12a SEMANA INTERNACIONAL DE CIENCIA, TECNOLOGÍA E INNOVACIÓN 2026</h2>
 
                         <!--******************************** Correo ********************************-->
                         <input type="email" name="email_form" placeholder="Correo Electronico">
@@ -352,7 +374,7 @@
             <div class="container">
                 <div class="row gy-2 align-items-center justify-content-center">
                     <div class="col-md-6 text-center">
-                        <p class="copyright-text">Copyright <i class="fas fa-copyright"></i> 2025 . All Rights Reserved.
+                        <p class="copyright-text">Copyright <i class="fas fa-copyright"></i> 2026 . All Rights Reserved.
                         </p>
                     </div>
                 </div>
