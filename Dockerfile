@@ -1,17 +1,22 @@
-FROM docker.io/nginx:alpine
-WORKDIR /usr/share/nginx/html
+FROM alpine:latest
+
+# Instalar nginx + php + extensiones necesarias
 RUN apk update && \
-    apk add --no-cache curl
-#RUN apk add apache2-ssl apache2
+    apk add nginx php-fpm php-cli php-mysqli php-json php-openssl php-curl php-session php-zip
 
-#RUN apk add php$phpverx-apache2 
+# Crear carpetas necesarias para nginx
+RUN mkdir -p /run/nginx
 
-RUN apk add php-fpm 
+# Copiar TODO tu proyecto dentro del contenedor
+COPY . /var/www/html
 
-COPY ssl/nginx-selfsigned.crt /etc/ssl/certs/nginx-selfsigned.crt
-COPY ssl/nginx-selfsigned.key /etc/ssl/private/nginx-selfsigned.key
-COPY ssl/ssl.conf /etc/nginx/conf.d/ssl.conf
-COPY ./data/ .
+# Copiar configuración de nginx
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Establecer permisos para uploads y php
+RUN chown -R nginx:nginx /var/www/html
+
 EXPOSE 80
-EXPOSE 443
-CMD ["nginx", "-g", "daemon off;"]
+
+# Iniciar php-fpm83 y nginx correctamente
+CMD ["sh", "-c", "php-fpm83 -F & nginx -g 'daemon off;'"]

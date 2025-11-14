@@ -1,9 +1,9 @@
 <?php
 
-$host = "localhost";
+$host = "db";
 $user = "root";
-$password = "";
-$database = "sictel_db";
+$password = "root123";
+$database = "sictel";
 
 $conn = new mysqli($host, $user, $password, $database);
 
