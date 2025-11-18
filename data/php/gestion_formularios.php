@@ -173,12 +173,16 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'Evaluador') {
                         </ul>
                     </li>
 
-                    <li>
-                        <a href="perfil.php">USUARIO</a>
+                    <li class="menu-item-has-children">
+                        <a href="#">USUARIO</a>
+                        <ul class="sub-menu">
+                            <li><a href="php/perfil.php">Perfil</a></li>
+                            <li><a href="php/login.php">Iniciar Sesión</a></li>
+                        </ul>
                     </li>
 
                     <li>
-                        <a href="login.php">LOGIN</a>
+                        <a href="../info.html">INSCRIPCION</a>
 
                     </li>
                 </ul>
@@ -249,16 +253,39 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'Evaluador') {
                                     target="_blank">11va Edicion</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="perfil.php">USUARIO</a>
+                    <li class="nav-item dropdown menu-item-has-children">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> USUARIO </a>
+                        <ul class="dropdown-menu" >
+                            <li><a class="dropdown-item" href="php/perfil.php">Perfil</a></li>
+                            <li><a class="dropdown-item" href="php/login.php">Iniciar Sesión</a></li> 
+                        </ul>
                     </li>
 
                 </ul>
 
-                <a href="login.php" class="btn btn-inscripcion ms-2 me-3">LOGIN</a>
+                <a href="../info.html" class="btn btn-inscripcion ms-2 me-3">INSCRIPCION</a>
             </div>
         </div>
     </nav>
+
+    <!--============================== Hero Area ==============================-->
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../assets/img/img/Recepción.png" class="d-block w-100" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/img/Recepción2.png" class="d-block w-100" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/img/Recepción3.png" class="d-block w-100" alt="Slide 3">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/img/Recepción4.png" class="d-block w-100" alt="Slide 4">
+          </div>
+        </div>
+    </div>
 
     <!--============================== Gestion Area ==============================-->
 
