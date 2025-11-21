@@ -5,13 +5,17 @@ RUN apk update && \
 
 RUN mkdir -p /run/nginx
 
-# Copiar el proyecto tal cual, manteniendo /data/
+# Copiar el proyecto tal cual
 COPY . /var/www/html/
 
 # Ajustar permisos
 RUN chown -R nginx:nginx /var/www/html
 
-EXPOSE 80
+# Railway asigna el puerto en $PORT
+ENV PORT=8080
 
-CMD ["sh", "-c", "php-fpm83 -F & nginx -g 'daemon off;'"]
+EXPOSE 8080
+
+CMD sh -c "php-fpm83 -F & nginx -g 'daemon off;'"
+
 
