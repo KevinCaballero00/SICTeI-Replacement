@@ -1,21 +1,20 @@
-FROM alpine:latest
+FROM alpine:3.19
 
 RUN apk update && \
-    apk add nginx php83 php83-fpm php83-mysqli php83-json php83-openssl php83-curl php83-session php83-zip
+    apk add --no-cache nginx supervisor \
+    php82 php82-fpm php82-mysqli php82-json php82-openssl \
+    php82-curl php82-session php82-zip php82-fileinfo php82-xml
 
 RUN mkdir -p /run/nginx
 
-# Copiar el proyecto tal cual
 COPY . /var/www/html/
 
-# Ajustar permisos
 RUN chown -R nginx:nginx /var/www/html
 
-# Railway asigna el puerto en $PORT
-ENV PORT=8080
+# ============== SUPERVISOR ==============
+COPY supervisor.conf /etc/supervisord.conf
 
+ENV PORT=8080
 EXPOSE 8080
 
-CMD sh -c "php-fpm83 -F & nginx -g 'daemon off;'"
-
-
+CMD ["supervisord", "-c", "/etc/supervisord.conf"]
