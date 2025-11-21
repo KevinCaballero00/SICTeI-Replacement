@@ -1,11 +1,12 @@
 <?php
 
-$host = "db";
+$host = "mysql.railway.internal";
 $user = "root";
-$password = "root123";
-$database = "sictel";
+$password = "UZwrrEhfbXRZmtwbGyluwOhJGxXgFVvV";
+$database = "railway";
+$port = getenv("3306");
 
-$conn = new mysqli($host, $user, $password, $database);
+$conn = new mysqli($host, $user, $password, $database, $port);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
