@@ -1,4 +1,7 @@
 <?php
+// Establecer tiempo máximo de ejecución
+set_time_limit(30);
+
 include 'config.php';
 session_start();
 
@@ -11,12 +14,22 @@ if (!isset($_SESSION['email'])) {
 // Obtener el email del usuario de la sesión
 $email = $_SESSION['email'];
 
-// Consulta correcta usando prepared statements
-$stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
-$stmt->bind_param("s", $email);
-$stmt->execute();
-$result = $stmt->get_result();
-$user = $result->fetch_assoc();
+try {
+    // Consulta con timeout
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
+    if (!$stmt) {
+        die("Error en prepare: " . $conn->error);
+    }
+    
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $user = $result->fetch_assoc();
+    $stmt->close();
+    
+} catch (Exception $e) {
+    die("Error en la consulta: " . $e->getMessage());
+}
 
 ?>
 
@@ -33,9 +46,8 @@ $user = $result->fetch_assoc();
 <body>
     <div class="container">
         <div class="form-box active profile-box">
-            <?php if ($user): ?>
+            <?php if (isset($user) && $user): ?>
                 <h2>Mi Usuario</h2>
-                <!-- Información del usuario -->
                 <div class="profile-info">
                     <div class="info-group">
                         <label>Nombre:</label>
@@ -54,7 +66,7 @@ $user = $result->fetch_assoc();
                         <p><?php echo htmlspecialchars($user['role']); ?></p>
                     </div>
                 </div>
-                <!-- Botones de acción -->
+
                 <?php if ($user['role'] === 'Ponente'): ?>
                     <button onclick="window.location.href='formulario.php'">Inscribir Ponencia</button>
                 <?php endif; ?>
@@ -68,7 +80,6 @@ $user = $result->fetch_assoc();
                 <?php endif; ?>
 
                 <button onclick="window.location.href='login.php'">Cerrar Sesión</button>
-
                 <button onclick="window.location.href='../index.html'">Volver al Inicio</button>
             <?php else: ?>
                 <p class="error-message">No se encontraron datos del usuario.</p>
