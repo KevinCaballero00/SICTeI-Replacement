@@ -3,11 +3,12 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
-$host = getenv("mysql.railway.internal") ?: getenv("MYSQL_HOST");
-$user = getenv("root") ?: getenv("MYSQL_USER");
-$password = getenv("GMlubQUVAYQOCEeZHVwTwNmgSMowxjef") ?: getenv("MYSQL_ROOT_PASSWORD");
-$database = getenv("railway") ?: getenv("MYSQL_DATABASE");
-$port = getenv("3306") ?: getenv("MYSQL_PORT") ?: 3306;
+// Railway proporciona las variables SIN guion bajo
+$host = getenv("MYSQLHOST");
+$user = getenv("MYSQLUSER");
+$password = getenv("MYSQLPASSWORD");
+$database = getenv("MYSQLDATABASE");
+$port = getenv("MYSQLPORT") ?: 3306;
 
 // Debug - descomenta temporalmente para verificar
 /*
@@ -30,14 +31,3 @@ if ($conn->connect_error) {
 
 $conn->set_charset("utf8mb4");
 ?>
-```
-
-### Solución 2: O agrega las variables manualmente
-
-En tu servicio web (no en MySQL), ve a Variables y agrega manualmente:
-```
-MYSQLHOST=mysql.railway.internal
-MYSQLUSER=root
-MYSQLPASSWORD=UZwrrEhfbXRZmtwbGyIuwOhJGcXgFVvV
-MYSQLDATABASE=railway
-MYSQLPORT=3306
