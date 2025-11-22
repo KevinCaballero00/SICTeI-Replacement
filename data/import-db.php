@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 echo "✅ Conectado correctamente<br><br>";
 
 // Lee el archivo SQL desde la carpeta db
-$sql_file = __DIR__ . '/../db/sictel_db.sql';
+$sql_file = __DIR__ . '/../data/db/sictel.sql';
 
 if (!file_exists($sql_file)) {
     die("❌ No se encuentra el archivo: $sql_file");
