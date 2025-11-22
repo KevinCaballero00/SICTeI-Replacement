@@ -3,11 +3,11 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
-$host = getenv("MYSQLHOST") ?: getenv("MYSQL_HOST");
-$user = getenv("MYSQLUSER") ?: getenv("MYSQL_USER");
-$password = getenv("MYSQLPASSWORD") ?: getenv("MYSQL_ROOT_PASSWORD");
-$database = getenv("MYSQLDATABASE") ?: getenv("MYSQL_DATABASE");
-$port = getenv("MYSQLPORT") ?: getenv("MYSQL_PORT") ?: 3306;
+$host = getenv("mysql.railway.internal") ?: getenv("MYSQL_HOST");
+$user = getenv("root") ?: getenv("MYSQL_USER");
+$password = getenv("GMlubQUVAYQOCEeZHVwTwNmgSMowxjef") ?: getenv("MYSQL_ROOT_PASSWORD");
+$database = getenv("railway") ?: getenv("MYSQL_DATABASE");
+$port = getenv("3306") ?: getenv("MYSQL_PORT") ?: 3306;
 
 // Debug - descomenta temporalmente para verificar
 /*
