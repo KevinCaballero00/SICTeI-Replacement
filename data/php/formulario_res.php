@@ -51,6 +51,7 @@ if (!empty($errors)) {
 }
 
 // ===== Manejo del archivo PDF (ahora acepta archivos Word) =====
+// ===== Manejo del archivo PDF (ahora acepta archivos Word) =====
 $archivo_pdf = null;
 if (isset($_FILES['archivo_pdf']) && $_FILES['archivo_pdf']['error'] === UPLOAD_ERR_OK) {
     $nombreTmp = $_FILES['archivo_pdf']['tmp_name'];
@@ -59,9 +60,13 @@ if (isset($_FILES['archivo_pdf']) && $_FILES['archivo_pdf']['error'] === UPLOAD_
 
     // Aceptar solo Word (.doc o .docx)
     if (in_array($ext, ['doc', 'docx'])) {
-        $directorioDestino = 'uploads/';
+        // Usar ruta absoluta
+        $directorioDestino = __DIR__ . 'uploads/';
+        
         if (!is_dir($directorioDestino)) {
-            mkdir($directorioDestino, 0777, true);
+            if (!mkdir($directorioDestino, 0777, true)) {
+                die('Error: No se pudo crear la carpeta uploads. Verifica los permisos.');
+            }
         }
 
         // Evitar nombres duplicados
@@ -69,9 +74,10 @@ if (isset($_FILES['archivo_pdf']) && $_FILES['archivo_pdf']['error'] === UPLOAD_
         $rutaDestino = $directorioDestino . $nombreUnico;
 
         if (move_uploaded_file($nombreTmp, $rutaDestino)) {
-            $archivo_pdf = $rutaDestino;
+            // Guardar solo la ruta relativa en la BD
+            $archivo_pdf = 'uploads/' . $nombreUnico;
         } else {
-            die('Error al guardar el archivo Word.');
+            die('Error al guardar el archivo Word. Permisos insuficientes.');
         }
     } else {
         die('Solo se permiten archivos Word (.doc o .docx).');

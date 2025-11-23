@@ -10,7 +10,10 @@ RUN mkdir -p /run/nginx /run/php-fpm /var/lib/php/sessions && \
 
 COPY . /var/www/html/
 
-# Dar permisos al script
+# Crear carpeta uploads con permisos
+RUN mkdir -p /var/www/html/data/php/uploads && \
+    chmod 777 /var/www/html/data/php/uploads
+
 RUN chmod +x /var/www/html/start-php-fpm.sh
 
 RUN chown -R nginx:nginx /var/www/html && \
