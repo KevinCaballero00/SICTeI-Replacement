@@ -61,7 +61,7 @@ if (isset($_FILES['archivo_pdf']) && $_FILES['archivo_pdf']['error'] === UPLOAD_
     // Aceptar solo Word (.doc o .docx)
     if (in_array($ext, ['doc', 'docx'])) {
         // Usar ruta absoluta
-        $directorioDestino = __DIR__ . 'uploads/';
+        $directorioDestino = __DIR__ . '/uploads/';
         
         if (!is_dir($directorioDestino)) {
             if (!mkdir($directorioDestino, 0777, true)) {
