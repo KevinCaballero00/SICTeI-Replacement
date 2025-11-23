@@ -180,8 +180,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'assig
                     <li class="menu-item-has-children">
                         <a href="#">USUARIO</a>
                         <ul class="sub-menu">
-                            <li><a href="php/perfil.php">Perfil</a></li>
-                            <li><a href="php/login.php">Iniciar Sesión</a></li>
+                            <li><a href="perfil.php">Perfil</a></li>
+                            <li><a href="login.php">Iniciar Sesión</a></li>
                         </ul>
                     </li>
 
@@ -260,8 +260,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'assig
                     <li class="nav-item dropdown menu-item-has-children">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> USUARIO </a>
                         <ul class="dropdown-menu" >
-                            <li><a class="dropdown-item" href="php/perfil.php">Perfil</a></li>
-                            <li><a class="dropdown-item" href="php/login.php">Iniciar Sesión</a></li> 
+                            <li><a class="dropdown-item" href="perfil.php">Perfil</a></li>
+                            <li><a class="dropdown-item" href="login.php">Iniciar Sesión</a></li> 
                         </ul>
                     </li>
 
